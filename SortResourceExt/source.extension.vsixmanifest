@@ -6,7 +6,6 @@
         <Description xml:space="preserve">Sort resource files by "name" attribure in ascending (only sort "data" node). Now only support for ".resx" extension.</Description>
         <MoreInfo>https://github.com/DVHuan/SortResourcesExt</MoreInfo>
         <GettingStartedGuide>https://github.com/DVHuan/SortResourcesExt</GettingStartedGuide>
-        <Preview>true</Preview>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
