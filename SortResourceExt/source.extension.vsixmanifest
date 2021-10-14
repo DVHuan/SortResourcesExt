@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SortResourceExt.0cbaa562-30ce-4ebc-badc-a014dc959100" Version="1.0" Language="en-US" Publisher="Huan Dam" />
+        <Identity Id="SortResourceExt.0cbaa562-30ce-4ebc-badc-a014dc959100" Version="1.0" Language="en-US" Publisher="Van Huan" />
         <DisplayName>Sort Resources Extension</DisplayName>
         <Description xml:space="preserve">Sort resource files by "name" attribure in ascending (only sort "data" node). Now only support for ".resx" extension.</Description>
         <MoreInfo>https://github.com/DVHuan/SortResourcesExt</MoreInfo>
