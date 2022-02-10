@@ -9,12 +9,12 @@ using System.Xml.Linq;
 using Utilities;
 using Task = System.Threading.Tasks.Task;
 
-namespace SortResourceExt
+namespace SortResourceVS2022
 {
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class SortResourceCommand
+    internal sealed class SortRSCommand
     {
         /// <summary>
         /// Command ID.
@@ -24,15 +24,31 @@ namespace SortResourceExt
         /// <summary>
         /// Command menu group (command set GUID).
         /// </summary>
-        public static readonly Guid CommandSet = new Guid("375e429d-4fb9-420b-9ad5-bb17130e256b");
+        public static readonly Guid CommandSet = new Guid("d6856ab7-6c3a-4a4d-8b45-d362635a2a24");
+
+        /// <summary>
+        /// VS Package that provides this command, not null.
+        /// </summary>
+        private readonly AsyncPackage package;
 
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static SortResourceCommand Instance
+        public static SortRSCommand Instance
         {
             get;
             private set;
+        }
+
+        /// <summary>
+        /// Gets the service provider from the owner package.
+        /// </summary>
+        private Microsoft.VisualStudio.Shell.IAsyncServiceProvider ServiceProvider
+        {
+            get
+            {
+                return this.package;
+            }
         }
 
         /// <summary>
@@ -54,7 +70,7 @@ namespace SortResourceExt
             // Visual studio status bar.
             var statusbar = await package.GetServiceAsync(typeof(SVsStatusbar)) as IVsStatusbar;
 
-            var cmdId = new CommandID(PackageGuids.guidSortResourceExtPackageCmdSet, PackageIds.SortResourceCommandId);
+            var cmdId = new CommandID(PackageGuids.guidSortResourceVS2022PackageCmdSet, PackageIds.SortResourceCommandId);
             var cmd = new OleMenuCommand((s, e) => { OnExecute(dte, statusbar); }, cmdId)
             {
                 Supported = false

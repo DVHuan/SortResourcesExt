@@ -2,14 +2,14 @@
 using System.Linq;
 using System.Xml.Linq;
 
-namespace SortResourceExt.Helpers
+namespace Utilities
 {
     public class XLMHelper
     {
         /// <summary>
-        /// Sort element by attribute "name" (not recursively).
-        /// </summary>
-        /// <param name="element"></param>
+     /// Sort element by attribute "name" (not recursively).
+     /// </summary>
+     /// <param name="element"></param>
         public static void SortXML(XElement element)
         {
             // Hàm chỉ sort các node "data", attribute "name" tăng dần.
